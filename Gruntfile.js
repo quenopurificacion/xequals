@@ -4,6 +4,9 @@ module.exports = function(grunt) {
         
         sass: {
             dist: {
+                options: {
+                    style: 'compressed'
+                },
                 files: {
                     "./dist/css/styles.css": "./assets/scss/main.scss"
                 }
@@ -20,6 +23,16 @@ module.exports = function(grunt) {
             }
         },
 
+        uglify: {
+            options: { 
+                compress: true 
+            },
+            applib: {
+                src: ['./dist/scripts/custom.js'],
+                dest: './dist/scripts/custom.min.js'
+            }
+        },
+
         watch: {
             scripts: {
                 files: [
@@ -30,6 +43,10 @@ module.exports = function(grunt) {
             concat: {
                 files: ['./assets/**/*.js'],
                 tasks: ['concat']
+            },
+            uglify: {
+                files: ['./dist/scripts/custom.js'],
+                tasks: ['uglify']
             }
         }
     });
@@ -37,7 +54,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.registerTask('default', ['sass','concat']);
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    
+    grunt.registerTask('default', ['sass','concat', 'uglify']);
     
   
 };

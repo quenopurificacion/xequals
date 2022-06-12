@@ -1,5 +1,4 @@
-Xequals Front end challenge. 
-
+# Xequals Front end challenge. 
 
 Basically we would like you demonstrate your front end skills by styling the HTML in this repo to the the provided design.
 The HTML has been taken from a Drupal site so it may have attributes and tags you are not familiar with. We would also like you to share it with us on Git.
@@ -22,3 +21,10 @@ Other Points
 
 
 We want to see how you set up a front end, your best sass/css practices and how you make a design into a finished website. This includes, colours, fonts and layout but you don't have to replicate the images. 
+
+# For development
+## Instructions
+1. Clone repository 
+2. npm install
+3. run command `grunt watch`
+4. Enjoy!
