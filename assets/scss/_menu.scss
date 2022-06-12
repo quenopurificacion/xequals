@@ -4,9 +4,12 @@
     }
 
     .menu {
-        max-width: 1200px;
+        max-width: 900px;
         margin: 0 auto;
-        text-align: center;
+        padding: 0 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     
         &--main {
             background-color: $blue;
@@ -14,19 +17,42 @@
     }
 
     .menu-item {
-        list-style-type: none;
-        display: inline-block;
+        list-style-type: none;        
         margin-left: -3px;
+        
 
-        @include navigation-link($white, $dark-blue, $small-text, none, uppercase, 10px 20px, block);
+        @include navigation-link($white, $dark-blue, $small-text, none, uppercase, 15px 20px, block);
 
         &--active-trail {
             background-color: $white;
-            @include navigation-link($dark-blue, $dark-blue, $small-text, none, uppercase, 10px 20px, block);
+            @include navigation-link($dark-blue, $dark-blue, $small-text, none, uppercase, 15px 20px, block);
         }           
 
         &:hover {
             background-color: $white;
+        }
+
+        &:last-child {
+            margin-left: auto;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            a {
+                font-size: 0;
+                padding: 0;
+
+                &::before{
+                    content: '';   
+                    background-image: url(../../assets/img/facebook-white.svg);
+                    background-repeat: no-repeat;
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                }
+                
+            }
         }
     }
 }
@@ -41,12 +67,13 @@
     .menu {
         background-color: $dark-blue;
 
-        .menu-item {
+        li.menu-item {
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             
             &:hover {
                 background-color: $white;
-            }
+            }        
+            
         }
 
         &--main {
