@@ -18,18 +18,7 @@
 
             @include respond_to(sm-down) {
                 width: calc(50% - 10px);
-            }
-
-            @include respond_to(xs-down) {
-                width: calc(100%);
-
-                a {
-                    display: block;
-                    img {
-                        width: 100%;
-                    }
-                }
-            }            
+            }         
         }
     }  
 }
