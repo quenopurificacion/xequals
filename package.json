@@ -1,0 +1,29 @@
+{
+  "name": "xequals",
+  "version": "1.0.0",
+  "description": "Xequals Front end challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quenopurificacion/xequals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quenopurificacion/xequals/issues"
+  },
+  "homepage": "https://github.com/quenopurificacion/xequals#readme",
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "default": "^0.1.1"
+  }
+}

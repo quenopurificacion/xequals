@@ -1,0 +1,161 @@
+.main-container {
+
+    .region {
+
+        &-header {
+            padding-bottom: 50px;
+        }
+    
+        &-content-top {
+            background-image: url(../../assets/img/Waves.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 504px;
+            margin-bottom: -135px;
+
+            @include respond_to(sm-down) {
+                margin-bottom: 0;
+                height: 250px;
+            }
+
+            &:first-child {
+                padding-bottom: 0;
+            }
+
+            .region-container {
+                padding-bottom: 0;
+            }
+        }
+    
+        &-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: $white;
+            padding-bottom: 50px;
+        }
+    }
+
+    .block {
+    
+        &-core,
+        &-system {
+            padding-top: 50px;
+        }
+    
+        &-core {
+            margin: 0 50px;
+
+            @include respond_to(sm-down) {
+                margin: 0;
+                padding: 50px 15px 0;
+            }
+        }
+
+        &-system {
+            @include respond_to(sm-down) {
+                margin: 0;
+                padding: 50px 15px 0;
+            }
+        }
+    
+        &-page-title-block {        
+                text-align: center;
+        }
+
+        .page-title {
+            border-bottom: 5px solid;
+            padding: 0 0px 30px;
+            margin: 0 70px 20px;
+            color: $dark-blue;
+
+            @include respond_to(sm-down) {
+                margin: 0;
+                
+                .field {
+                    font-size: 35px;                    
+                }
+            }
+        }
+        
+    }
+    
+    .paragraph {   
+    
+        &--type {
+    
+            &--text-area,
+            &--text-with-an-image- {
+                margin: 0 50px;
+    
+                @include paragraph($dark-blue, $small-text, none);
+                @include respond_to(sm-down) {
+                    margin: 0;
+                }
+            } 
+            
+            &--text-area {   
+                margin: 0 auto 50px;
+                max-width: 400px;
+                
+                @include respond_to(sm-down) {
+                    margin: 0;
+                    max-width: 100%;
+                }
+
+                .field__item {
+                    font-weight: 300;
+                }
+            }
+    
+            &--text-with-an-image- {
+                display: flex;
+                justify-content: space-between;       
+                margin-bottom: 50px;
+
+                @include respond_to(sm-down) {
+                    display: block;
+
+                    & > div {
+                        width: 100%;
+
+                        .colorbox {
+                            display: block;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .field {
+                    &--name-field-long-text {
+                        padding-left: 15px;
+                        flex: 1;
+
+                        @include respond_to(sm-down) {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }        
+        }  
+    }
+    
+    .field {   
+        &--name-body {
+            .field__item {
+                text-align: center;
+                text-transform: uppercase;
+                @include paragraph($white, $small-text, none);
+            }
+        }    
+    
+        &--name-title {
+            text-align: center;
+            font-weight: 500;
+            font-size: 46px;
+        }    
+    }
+}

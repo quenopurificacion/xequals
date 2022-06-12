@@ -1,0 +1,35 @@
+.paragraph {
+    &--type {
+        &--image-gallery {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding-bottom: 30px;
+        }
+
+        &--image-with-caption {
+            width: calc(33.33% - 10px);
+            margin-bottom: 15px;
+
+            @include respond_to(sm-down) {
+                width: calc(50% - 10px);
+            }
+
+            @include respond_to(xs-down) {
+                width: calc(100%);
+
+                a {
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }            
+        }
+    }  
+}

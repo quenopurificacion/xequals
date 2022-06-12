@@ -1,0 +1,57 @@
+.region-navigation {
+    @include respond_to(sm-down) { 
+        display: none;
+    }
+
+    .menu {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    
+        &--main {
+            background-color: $blue;
+        }
+    }
+
+    .menu-item {
+        list-style-type: none;
+        display: inline-block;
+        margin-left: -3px;
+
+        @include navigation-link($white, $dark-blue, $small-text, none, uppercase, 10px 20px, block);
+
+        &--active-trail {
+            background-color: $white;
+            @include navigation-link($dark-blue, $dark-blue, $small-text, none, uppercase, 10px 20px, block);
+        }           
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+}
+
+.region-mobilenav {
+    display: none; 
+    
+    &.show {
+        display: block;
+    }
+    
+    .menu {
+        background-color: $dark-blue;
+
+        .menu-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            
+            &:hover {
+                background-color: $white;
+            }
+        }
+
+        &--main {
+            @include navigation-link($white, $dark-blue, $small-text, none, uppercase, 10px 20px, block);
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+.page-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+
+    .region-footer {
+        background-image: url(../../assets/img/Waves.jpg);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    
+        padding: 100px 0 150px;
+
+        @include link($white, $small-text, none, capitalize, 500);
+        @include paragraph($white, $small-text, none);
+    }
+}

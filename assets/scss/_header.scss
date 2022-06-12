@@ -1,0 +1,6 @@
+header.header {
+    background-color: $dark-blue;
+     
+    @import 'logo';
+    @import 'menu';
+}
